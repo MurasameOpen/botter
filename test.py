@@ -1,3 +1,10 @@
 __author__ = 'miyatake_y'
 
-print ("Hello world!")
+import bottle
+from bottle import route, run
+
+@route('/hello')
+def hello():
+    return "Hello World!"
+
+run(host='localhost', port=1046, debug=True, reloader=True)
