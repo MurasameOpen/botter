@@ -1,0 +1,19 @@
+{% extends "base.j2" %}
+
+{% block content %}
+  <div id="postform">
+    <form method="POST" action="/1/twitter/post">
+      <table>
+        <tr><td><textarea cols="70" rows="3" name="status"></textarea></td></tr>
+        <tr><td align="right"><input type="submit" name="doit" value="Update"></td></tr>
+      </table>
+    </form>
+  </div>
+
+<h2>Timeline</h2>
+<br>
+{% for post in posts %}
+{{ post.text }} <br><hr>
+{% endfor %}
+
+{% endblock %}

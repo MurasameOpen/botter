@@ -1,2 +1,2 @@
 # botter
-Python twitter like server
+Python twitter client
